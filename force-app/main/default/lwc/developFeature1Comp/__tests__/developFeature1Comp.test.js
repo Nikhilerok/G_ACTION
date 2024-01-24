@@ -1,7 +1,7 @@
 import { createElement } from 'lwc';
 import DevelopFeature1Comp from 'c/developFeature1Comp';
 
-describe('c-develop-feature1-comp', () => {
+describe('c-develop-feature1-comp', () => { 
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {
