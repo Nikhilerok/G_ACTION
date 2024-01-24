@@ -1,7 +1,5 @@
-name: creating second  workflow (First Org)
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For First ORG
-
-  
+name: creating   workflow 
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For  ORG
 
 on: 
   push:
