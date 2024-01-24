@@ -11,6 +11,7 @@ on:
   pull_request:
     types: [closed]  # Trigger when a pull request is closed (merged)
 
+
 jobs:
   SFDX-CLI-Deploy:
     runs-on: ubuntu-latest
