@@ -2,11 +2,13 @@ name: creating second  workflow (Second Org)
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For Second ORG
 
   
-on:
-  pull_request:
-    types: [closed]
+on: 
+  push:
     branches:
-      - DEVELOP  # Only trigger for pull requests targeting the main branch
+    - SCRATCH_MAIN
+      - main
+  pull_request:
+    types: [closed]  # Trigger when a pull request is closed (merged)
 
 jobs:
   SFDX-CLI-Deploy:
