@@ -1,5 +1,6 @@
-name: creating second  workflow (SECOND Org)
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For SECOND ORG
+name: creating   workflow 
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For First ORG
+
 on: 
   push:
     branches:
@@ -7,7 +8,8 @@ on:
       - main
   pull_request:
     types: [closed]  # Trigger when a pull request is closed (merged)
-    
+
+        
 jobs:
   SFDX-CLI-Deploy:
     runs-on: ubuntu-latest
