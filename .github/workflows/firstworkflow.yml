@@ -1,8 +1,5 @@
-name: creating second  workflow (Second Org)
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For Second ORG
-
-
-   
+name: creating second  workflow (SECOND Org)
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀 For SECOND ORG
 on: 
   push:
     branches:
@@ -10,8 +7,7 @@ on:
       - main
   pull_request:
     types: [closed]  # Trigger when a pull request is closed (merged)
-
-
+    
 jobs:
   SFDX-CLI-Deploy:
     runs-on: ubuntu-latest
@@ -22,5 +18,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm install sfdx-cli -g
       - run: echo "${{ secrets.SALESFORCE_666_JWT_SECRET_KEY }}" > server.key
-      - run: sfdx force:auth:jwt:grant --clientid=${{ secrets.SALESFORCE_666_CONSUMER_KEY }} --jwtkeyfile=server.key --username=${{ secrets.SALESFORCE_666_DEVHUB_USERNAME }} --setdefaultdevhubusername
+      - run: sfdx force:auth:jwt:grant --clientid=${{ secrets.SALESFORCE_666_CONSUMER_KEY  }} --jwtkeyfile=server.key --username=${{ secrets.SALESFORCE_666_DEVHUB_USERNAME }} --setdefaultdevhubusername
       - run: sfdx force:source:deploy --manifest=manifest/package.xml --testlevel=RunLocalTests -u ${{ secrets.SALESFORCE_666_DEVHUB_USERNAME }}
